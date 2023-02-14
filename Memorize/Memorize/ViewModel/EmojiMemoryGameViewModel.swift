@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-class EmojiMemoryGameViewModel {
-    private var memoryGameModel: MemoryGameModel<String> = EmojiMemoryGameViewModel.createMemoryGame()
+class EmojiMemoryGameViewModel: ObservableObject {
+    @Published private var memoryGameModel: MemoryGameModel<String> = EmojiMemoryGameViewModel.createMemoryGame()
 
     // MARK: - Init auxiliar function
     static func createMemoryGame() -> MemoryGameModel<String> {
